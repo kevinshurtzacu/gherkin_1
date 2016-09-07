@@ -1,0 +1,8 @@
+# Compile the project files
+javac -cp "jars/*:." step_definitions/*.java \
+                     implementation/*.java
+
+# Run cucumber
+java -cp "jars/*:." cucumber.api.cli.Main -p progress --snippets camelcase \
+                                          -g step_definitions features
+
